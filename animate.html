@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/javascript.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<title>happy</title>
+</head>
+<style>
+    body{margin:0;padding:0;background-color:aqua;display:flex;justify-content:center;align-items:center;height:100vh}
+    .loader{position:relative;width:300px;height:300px;transform-style:preserve-3d;transform:perspective(500px) rotatex(60deg)}
+    .loader span{position:absolute;display:block;width:300px;height:300px;border:2px solid white;border-radius:50%;transform:translatez(-100px);animation:animate 2s ease-in-out infinite}
+    @keyframes animate{
+        0%,100% {
+            transform:translatez(-100px)
+        }
+        50%
+        {
+            transform:translatez(100px)
+        }
+    }
+     /* .loader span:nth-child(1)
+    {
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+    }
+    .loader span:nth-child(2)
+    {
+        left:10;
+        right:10;
+        top:10;
+        bottom:10;
+    }
+    .loader span:nth-child(3)
+    {
+        left:20;
+        right:20;
+        top:20;
+        bottom:20;
+    }  */
+    .loader span:nth-child(1)
+    {
+        transform:scale(1.1);
+        animation-delay: 1.0s;
+    }
+    .loader span:nth-child(2)
+    {
+        transform:scale(1.0);
+        animation-delay: 0.8s;
+    }
+    .loader span:nth-child(3)
+    {
+        transform:scale(0.9);
+        animation-delay: 0.7s;
+    }
+    .loader span:nth-child(4)
+    {
+        transform:scale(0.8);
+        animation-delay: 0.6s;
+    }
+    .loader span:nth-child(5)
+    {
+        transform:scale(0.7);
+        animation-delay: 0.5s;
+    }
+    .loader span:nth-child(6)
+    {
+        transform:scale(0.6);
+        animation-delay: 0.4s;
+    }
+    .loader span:nth-child(7)
+    {
+        transform:scale(0.5);
+        animation-delay: 0.3s;
+    }
+    .loader span:nth-child(8)
+    {
+        transform:scale(0.4);
+        animation-delay: 0.2s;
+    }
+    .loader span:nth-child(9)
+    {
+        transform:scale(0.3);
+        animation-delay: 0.1s;
+    }
+    .loader span:nth-child(10)
+    {
+        transform:scale(0.2);
+        animation-delay: 0s;
+    }
+</style>
+<body>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
