@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+
+<style>
+
+    .navbar-brand{ 
+        background:linear-gradient(white,orange);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+    }
+    .ab{
+        background:linear-gradient(to top right,blue,black);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+    }
+    .btn-primary{
+        position: relative;transform: translateX(50%);width:150px;height:50px;
+        bottom:-25px;display:flex;justify-content: center;
+        background:orange;color:white;font-size:20px;border:none
+    }
+    .service-item {
+    position: relative;
+    margin: 65px 0 25px 0;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    .service-item .service-img {
+    position: absolute;
+    padding: 12px;
+    width: 130px;
+    height: 130px;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+    z-index: 2;
+}
+
+.service-item .service-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+} 
+.service-item .service-img {
+    position: absolute;
+    padding: 12px;
+    width: 130px;
+    height: 130px;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+    z-index: 2;
+}
+
+.service-item .service-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.service-item .service-title {
+    position: absolute;
+    padding: 65px 30px 25px 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #FFFFFF;
+    transition: .5s;
+}
+
+.service-item:hover .service-title {
+    top: -100%;
+}
+
+.service-item .service-text {
+    position: absolute;
+    overflow: hidden;
+    padding: 65px 30px 25px 30px;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: rgba(2, 36, 91, .7);
+    transition: .5s;
+}
+
+.service-item:hover .service-text {
+    top: 0;
+    color: white;
+}
+
+.service-item .service-text::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    top: -100%;
+    left: 0;
+    transform: skewY(-12deg);
+    background: #FFFFFF;
+    transition: .5s;
+}
+
+.service-item:hover .service-text::before {
+    top: -55px;
+}
+
+.service-item .btn {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:red;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+    z-index: 2;
+}
+
+.service-item .btn:hover {
+    color:white;
+    background:red;
+}
+.main1{width:750px;margin-left:60px;position:absolute;}
+.main{position:relative}
+</style>
+<body>
+<div class="navbar navbar-expand-lg bg-primary">
+    <a href="" class="navbar-brand h1" style="font-size: 30px;">{Balu}</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><i class="bi bi-list"></i></button>
+        <div class="navbar-collapse collapse" id="menu">
+        <ul class="navbar-nav d-flex justify-content-between w-50 ms-auto">
+            <li class="nav-item dropdown"><a href="#" class="nav-link text-light dropdown-toggle fs-5" data-bs-toggle="dropdown">Home</a>
+            <ul class="dropdown-menu bg-secondary">
+                <li class="dropdown-item"><a href="#" class="nav-link bg-info">Education Details</a></li>
+                <li class="dropdown-item"><a href="#" class="nav-link bg-info">Appereance</a></li>
+                <li class="dropdown-item"><a href="#" class="nav-link bg-info">Qualification</a></li>
+            </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link text-light fs-5">Tech stack</a></li>
+            <li class="nav-item dropdown"><a href="#" class="nav-link text-light dropdown-toggle fs-5" data-bs-toggle="dropdown">Project</a>
+            <ul class="dropdown-menu bg-secondary">
+                <li class="dropdown-item"><a href="" class="nav-link bg-info">Heat sink Temperature</a></li>
+                <li class="dropdown-item"><a href="" class="nav-link bg-info">Smart Street Lightining</a></li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown"><a href="#" class="nav-link text-light dropdown-toggle fs-5" data-bs-toggle="dropdown">Contact</a>
+            <ul class="dropdown-menu bg-secondary">
+                <li class="dropdown-item"><a href="" class="nav-link bg-info">8179616064</a></li>
+                <li class="dropdown-item"><a href="" class="nav-link bg-info">9398176969</a></li>
+            </ul>
+            </li>
+            <i class="bi bi-moon fs-5 text-light mt-2"></i>
+        </ul>
+</div>
+</div>
+<div class="container-fluid" style="margin-top: 200px;">
+    <div class="row">
+        <div class="col-12 col-md-6 col-xs-12">
+            <div class="mx-5">
+         <h1 class="display-4 fw-bold text-primary">Hi<i class="bi bi-hand-index-thumb"></i></h1>
+          <h1 class="display-3 fw-bold text-primary">My name is</h1>
+          <h1 class="display-3 fw-bold ab">Bala krishna Danduprolu</h1>
+          <h1 class="display-4 fw-bold text-primary">Completed B.tech</h1>
+          <a href="" class="btn btn-primary">Resume</a>
+        </div>
+    </div>
+        <div class="col-12 col-md-6 col-xs-12">
+        <div class="main">
+        <img src="../image/balu1.jpg" class="rounded-circle img-fluid w-75 h-75 text-center mx-5" >
+    </div>
+</div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-12 col-xs-12" style="margin-top:200px;text-align: center;">
+        <h1 class="display-4 fw-bold">My Tech Stack</h1>
+        <h3 class="mt-5">Technologies I’ve been working with recently</h3>
+    </div>
+</div>
+</div>
+<div class="container">
+<div class="row mt-5 mx-5">
+    <div class="col-2 col-md-2 col-xs-2">
+        <div class="">
+        <img src="../image/html6.png" class="img-fluid w-100 h-100">
+    </div>
+    </div>
+    <div class="col-2 col-md-2 col-xs-2">
+        <img src="../image/css.png" class="img-fluid w-100 h-100">
+    </div>
+    <div class="col-2 col-md-2 col-xs-2">
+        <div class="">
+        <img src="../image/bs3.jpg" class="img-fluid w-100 h-100">
+    </div>
+</div>
+<div class="col-2 col-md-2 col-xs-2">
+    <img src="../image/php3.png" class="img-fluid w-100 h-100">
+</div>
+<div class="col-2 col-md-2 col-xs-2">
+    <img src="../image/sql1.png" class="img-fluid h-100 w-100">
+</div>
+<div class="col-2 col-md-2 col-xs-2">
+    <img src="../image/react.png" class="img-fluid h-100 w-100">
+</div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <h1 class="display-4 fw-bold text-center">Projects</h1>
+        <h4 class="text-center mt-4">Things I've built so far</h4>
+      <div class="col-12 col-md-4 col-xs-12">
+          <div class="service-item">
+              <img src="../image/amp.jpg" class="img-fluid" style="width:100%;height:500px">
+              <div class="service-img">
+                  <img src="../image/amp.jpg" class="img-fluid">
+              </div>
+              <div class="service-detail">
+              <div class="service-title">
+               <hr class="w-25">
+               <h3 class="mb-0">OFFER AMP</h3>
+               <hr class="w-25">
+              </div>
+              <div class="service-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              </div>
+              </div>
+              <a href="" class="btn btn-light">Read More</a>
+          </div>
+      </div>
+      <div class="col-12 col-md-4 col-xs-12">
+          <div class="service-item">
+              <img src="../image/industro1.png" class="img-fluid" style="width:100%;height:500px">
+              <div class="service-img">
+                  <img src="../image/industro1.png" class="img-fluid">
+              </div>
+              <div class="service-detail">
+              <div class="service-title">
+               <hr class="w-25">
+               <h3 class="mb-0">INDUSTRO</h3>
+               <hr class="w-25">
+              </div>
+              <div class="service-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              </div>
+              </div>
+              <a href="" class="btn btn-light">Read More</a>
+          </div>
+      </div>
+      <div class="col-12 col-md-4 col-xs-12">
+          <div class="service-item">
+              <img src="../image/impact.png" class="img-fluid" style="width:100%;height:500px">
+              <div class="service-img">
+                  <img src="../image/impact.png" class="img-fluid">
+              </div>
+              <div class="service-detail">
+              <div class="service-title">
+               <hr class="w-25">
+               <h3 class="mb-0">IMPACT</h3>
+               <hr class="w-25">
+              </div>
+              <div class="service-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              </div>
+              </div>
+              <a href="" class="btn btn-light">Read More</a>
+          </div>
+      </div>
+    </div>
+   </div>
+<div class="container">
+  <div class="row mt-5">
+   
+    <div class="col-12 col-md-4 col-xs-12">
+        <div class="border rounded">
+             <img src="../image/amp.jpg" style="width:100%;height:250px">
+             <h1 class="mx-5 m-2 text-info">OfferAmp</h1>
+            <p class="m-5" style="font-size:20px">Full Resposive Design Portfolio.<br> Developed first for mobile then<br> desktop .</p>
+            <a  href="" style="font-size:25px;margin-left: 20px;text-decoration:none;" class="text-secondary">Tech Stack: React Js</a>
+            <div class="row">
+                <div class="col-12 col-md-6 col-xs-12">
+                 <p style="font-size:22px;margin:20px">Live  Preview</p>
+                </div>
+                <div class="col-12 col-md-6 col-xs-12">
+                 <p style="font-size:22px;margin:20px">View Code</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 col-xs-12">
+        <div class="border rounded">
+            <img src="../image/industro1.png" class="w-100 h-100">
+            <h1 class="mx-5 m-2 text-info">Industro</h1>
+           <p class="m-5" style="font-size:20px">Full Resposive Design Portfolio.<br> Developed first for mobile then<br> desktop .</p>
+           <a href="" style="font-size:25px;margin-left: 20px;text-decoration:none;margin-top:300px" class="text-secondary">Tech Stack: React Js</a>
+           <div class="row">
+               <div class="col-12 col-md-6 col-xs-12">
+                <p style="font-size:22px;margin:20px">Live  Preview</p>
+               </div>
+               <div class="col-12 col-md-6 col-xs-12">
+                <p style="font-size:22px;margin:20px">View Code</p>
+               </div>
+           </div>
+       </div>
+    </div>
+    <div class="col-12 col-md-4 col-xs-12">
+        <div class="border rounded">
+            <img src="../image/impact.png" style="width:100%;height:250px">
+            <h1 class="mx-5 m-2 text-info"> My Portfolio</h1>
+           <p class="m-5" style="font-size:20px">Responsive MY Portfolio Using HTML, CSS & JavaScript. Contains animations when scrolling.</p>
+           <a href="" style="font-size:25px;margin-left: 20px;text-decoration:none;" class="text-secondary">Tech Stack: React Js</a>
+           <div class="row">
+               <div class="col-12 col-md-6 col-xs-12">
+                <p style="font-size:22px;margin:20px">Live  Preview</p>
+               </div>
+               <div class="col-12 col-md-6 col-xs-12">
+                <p style="font-size:22px;margin:20px">View Code</p>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+<a href="" class="btn btn-primary" style="display:flex;align-items:center;transform:translateX(550px);margin-top:20px;background:linear-gradient(to top right, blue,red,orange);">More</a>
+<h1 style="margin-top:200px" class="d-flex justify-content-center display-6 fw-bold">Contact Me</h1>
+</div>
+<div class="container col-12 col-md-12 col-xs-12">
+<h4>What'sapp</h4>
+<p class="mx-auto h4 mt-3">+91 8179616064</p>
+<h4 class="mt-5">Social-Media</h4>
+<i class="bi bi-linkedin fs-4 mx-2"></i>
+<i class="bi bi-instagram fs-4 mx-3"></i>
+<i class="bi bi-facebook fs-4 mx-1"></i>
+<form class="mt-5">
+    <div class="row">
+        <div class="col-12 col-md-6 col-xs-12">
+  <label class="text-muted">First Name</label>
+  <input type="text" class="form-control w-100" style="background:none;border:none;border-bottom:1px solid #767676;">
+  <label class="mt-5 text-muted">Email</label>
+  <input type="text" class="form-control w-100" style="background:none;border:none;border-bottom:1px solid #767676;">
+</div>
+  <div class="col-12 col-md-6 col-xs-12">
+    <label class="text-muted">Last Name</label>
+  <input type="text" class="form-control w-100" style="background:none;border:none;border-bottom:1px solid #767676;">
+  <label class="mt-5 text-muted">Phone</label>
+  <input type="text" class="form-control w-100" style="background:none;border:none;border-bottom:1px solid #767676;">
+  </div>
+</div>
+<h6 class="mt-3 text-muted">How we can help? </h6>
+<input type="text" class="form-control" style="width:100%;height:200px;background:none;border:none;border-bottom:1px solid #767676;">
+<button type="button" class="btn btn-danger position-relative top-0 start-50 mt-4 px-5 rounded-pill p-3">send</button>
+</form>
+</div>
+</body>
+</html>
