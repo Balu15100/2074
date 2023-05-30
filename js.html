@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body style="background:aqua">
+    <div class="container my-5">
+        <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-6">
+        <h1 class="mx-5 text-info">REGISTRATION FORM</h1>
+        <form name="regx" class="was-validated">
+    <div class="form-group">
+    <label class="form-label" for="first">First Name:</label>
+    <input type="text"  class="form-control" id="first" placeholder="Enter your first name" name="first" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="last">Last Name:</label>
+        <input type="text"  class="form-control" id="last" placeholder="Enter your last name" name="last" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="user">User Name:</label>
+        <input type="text" class="form-control" id="user" placeholder="Enter your user name" name="user" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="email">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="pass">Password:</label>
+        <input type="password" class="form-control" id="pass" placeholder="Enter your password" name="pass" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="pass1">Confirm Password:</label>
+        <input type="password" class="form-control" id="pass1" placeholder="Enter your Confirm password" name="pass1" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="ct">Contact Number :</label>
+        <input type="number" class="form-control" id="ct" placeholder="Enter your contact number" name="ct" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="dob">Date Of Birth:</label>
+        <input type="date" class="form-control" id="dob"  name="last" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="form-label" for="gen">Gender:</label>
+        <input type="radio" name="gender" value="male" required>&nbsp;Male &nbsp;&nbsp;
+        <input type="radio" name="gender" value="female" required>&nbsp;Female &nbsp;&nbsp;
+        <input type="radio" name="gender" value="other" required>&nbsp;Other &nbsp;&nbsp;    
+    </div> 
+    <input type="button" class="btn btn-primary" onclick="myfun()" value="Submit">
+</div>
+</div>
+<p id="demo"></p>
+</div>
+</form>
+</body>
+<script>
+    var str="";
+    function myfun(){
+        let fs=document.getElementById("first").value;
+        str+="First name: "+fs +"<br>";
+        let ls=document.getElementById("last").value;
+        str+="Last name: "+ls + "<br>";
+        let us=document.getElementById("user").value;
+        str+="User Name:" +us +"<br>";
+        let em=document.getElementById("email").value;
+        str+="Email:" +em +"<br>";
+        let pwd=document.getElementById("pass").value;
+        str+="password:" +pwd +"<br>";
+        let pwd1=document.getElementById("pass1").value;
+        str+="Confirm password:" +pwd1 +"<br>";
+        let number=document.getElementById("ct").value;
+        str+="Contact Number:" +number +"<br>";
+        let date=document.getElementById("dob").value;
+        str+="Date Of Birth:"+ date +"<br>";
+        let gender=document.forms.regx.gender.value;
+        str+="gender:"+gender+"<br>";
+        document.getElementById("demo").innerHTML=str;
+        if(pwd==null || pwd==""){
+            window.alert("password must be filled");
+        }
+        else if(pwd.length<8){
+            window.alert("password atleast 8 letters");
+        }
+        else if(pwd!=pwd1){
+            window.alert("password not matched");
+        }
+        else if(pwd==pwd1){
+            window.alert("password matched");
+        }
+        else{
+            window.alert("password ok");
+        }
+      if(number==null || number==""){
+           window.alert("number must be enter");
+      }
+      else if(number.length<10){
+        window.alert("number must be 10 digits");
+      }
+      else{
+        window.alert("your number correct")
+      }
+      if(gender==""){
+        window.alert("please choose your option");
+      }
+      else if(gender=="male"){
+        window.alert("you are male");
+      }
+      else if(gender=="female"){
+        window.alert("you are female");
+      }
+      else if(gender=="other"){
+        window.alert("you are other category");
+      }
+      else{
+        window.alert("option ok")
+      }
+    }
+</script>
+</html>
